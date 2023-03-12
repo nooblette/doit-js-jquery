@@ -1,0 +1,23 @@
+<script>
+    var tv = new Object(); // 객체생성함수
+    tv.color = "white"; // property 선언 및 초기화
+    tv.price = 300000; // property 선언 및 초기화
+    tv.info = function(){ // method 선언 및 초기화
+        document.write("tv 색상:"  + this.color, "<br>");
+        document.write("tv 가격:"  + this.price, "<br>");
+    }
+
+    var car = { // 객체를 생성하면서 property와 method를 초기화
+        color: "black",
+        price : 5000000,
+        info: function(){
+            document.write("car 색상:"  + this.color, "<br>");
+            document.write("car 가격:"  + this.price, "<br>");
+        }
+    };
+
+    document.write("<h1> tv 객체 매서드 호출</h1>");
+    tv.info();
+    document.write("<h1> car 객체 매서드 호출</h1>");
+    car.info();
+</script>

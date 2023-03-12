@@ -1,0 +1,18 @@
+<script>
+    var greenArr = ["교대", "방배", "강남"];
+    var yellowArr = ["미금", "정자", "수서"];
+
+    // greenArr의 두번째 원소부터 1개의 원소를 제거하고 "서초", "역삼" 을 차례대로 삽입
+    greenArr.splice(2, 1, "서초", "역삼"); 
+    console.log(greenArr);
+
+    var data1 = yellowArr.pop(); // 수서
+    var data2 = yellowArr.shift(); // 미금
+    console.log(yellowArr);
+
+    yellowArr.push(data2);
+    console.log(yellowArr);
+
+    yellowArr.unshift(data1);
+    console.log(yellowArr);
+</script>

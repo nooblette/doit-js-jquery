@@ -1,0 +1,25 @@
+<script>
+    var today = new Date(); // 현재 날짜로 정보 생성
+
+    // 영구적(delete 연산자로 지울 수 없다)), 지역변수로 선언됨
+    var nowMonth = today.getMonth(); 
+    // 임시적(delete 연산자로 지울 수 있다), 전역변수로 선언됨
+    nowDate = today.getDate();
+    nowDay = today.getDay();
+
+    document.write("<h1>오늘 날짜 정보</h1>");
+    document.write("현재 월: " + nowMonth, "<br>");
+    document.write("현재 일: " + nowDate, "<br>");
+    document.write("현재 요일: " + nowDay, "<br>");
+
+    var worldcup = new Date(2022,4,31);
+    var theMonth = worldcup.getMonth();
+    theDate = worldcup.getDate();
+    theDay = worldcup.getDay; // output : function getDay() { [native code] } 라고 출력됨
+    var theDay = worldcup.getDay(); // 지역변수가 우선순위를 가져간다
+
+    document.write("<h1>2002 월드컵 날짜 정보</h1>");
+    document.write("2002 월드컵 몇 월: " + theMonth, "<br>");
+    document.write("2002 월드컵 몇 일: " + theDate, "<br>");
+    document.write("2002 월드컵 무슨 요일: " + theDay, "<br>");
+</script>
