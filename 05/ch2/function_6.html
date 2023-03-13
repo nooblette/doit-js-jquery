@@ -1,0 +1,30 @@
+<script>
+    var num = 1;
+    function gallery(direct){
+        if (direct) { // direct가 1이면 다음
+            if(num == 8){ // 다음 이미지가 없으면 함수를 종료
+                return;
+            }
+            num++;
+        }
+        else { // direct가 0이면 이전
+            if(num == 1){ // 이전 이미지가 없으면 함수를 종료
+                return;
+            }
+            num--;
+        }
+
+    // id값이 "photo"인 image 태그를 선택(getElementById)
+    var imgTag = document.getElementById("photo"); 
+    imgTag.setAttribute("src", "images/pic_" + num + ".png");
+    }
+</script>
+<body>
+    <div id="galleryZone">
+        <p><img src="images/pic_1.png" id="photo" alt=""></p>
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+    </div>
+</body>
