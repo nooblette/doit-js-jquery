@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // id가 wrap인 요소의 자식 요소 중 (지정한) h1 요소에 대해 적용
+            $("#wrap > h1").css("border", "2px dashed #f00")
+            
+            // id가 wrap인 요소를 기준으로 자식 요소인 section의 자식요소를 모두 선택
+            $("#wrap > section").children()
+            .css({
+                "background-color":"yellow",
+                "border":"2px solid #f00"
+            });
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용</p>
+        <section>
+                <h1>자식 요소 선택자</h1>
+            <p>내용 2</p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            /* 
+             * <li id="list_1">의 상위 요소(부모 요소)인 <ul> 요소에 대해
+             * 두께가 2px인 빨간색 실선을 생성
+             */
+            $("#list_1").parent()
+            .css("border", "2px dashed #f00")
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트1
+            <ul>
+                <li id="list_1">리스트 1-1</li>
+                <li id="list_2">리스트 1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+</body>
+</html>
