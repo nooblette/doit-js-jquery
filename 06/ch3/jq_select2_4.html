@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            $("li:first-of-type").css({"background-color":"red"})
+            $("li:last-of-type").css({"background-color":"blue"})
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <!-- 내용1 ~ 내용4가 하나의 요소 무리-->
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <!-- 내용 5 ~ 내용 6이 하나의 요소 무리-->
+    <li>내용5</li>
+    <li>내용6</li>
+</body>
+</html>

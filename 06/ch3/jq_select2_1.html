@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // id가 menu인 요소의 첫번째 하위요소를 선택
+            $("#menu li:first")
+            .css({"background-color":"#ff0"});
+
+            // id가 menu인 요소의 마지막 하위요소를 선택
+            $("#menu li:last")
+            .css({"background-color":"#0ff"});
+        });
+    </script>    
+    <title>Document</title>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>    
+</body>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            var arr1 = [ {
+                "area" : "서울",
+                "name" : "무대리"
+            }, {
+                "area" : "부산",
+                "name" : "홍과장"
+            }, {
+                "area" : "전주",
+                "name" : "빅마마"
+            }]
+
+            // a와 b에 각각 배열의 객체와 인덱스값이 대입
+            var arr2 = $.map(arr1, function(a, b){
+                if(a.area == "서울"){
+                    // 새로운 배열 객체를 반환
+                    return b;
+                }
+            })
+            console.log(arr2);
+            console.log("====== the end 1 ======");
+            
+            var arr3 = $.grep(arr1, function(a, b){
+                if(a.area=="서울"){
+                    // 반환된 데이터가 true이면 새로운 배열 객체를 반환
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+
+            console.log(arr3);
+            console.log("====== the end 2 ======");
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
