@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // id 값이 sec_1인 요소의 하위 요소(html 태그들)를 문자열로 가져와 result_1에 저장
+            var result_1 = $("#sec_1").html()
+            console.log(result_1)
+            // id 값이 sec1인 요소의 하위 요소 중 p 요소의 하위 요소를 모두 변경하고, 지정한 새 요소(<a href></a>)로 생성
+            $("#sec_1 p").html("<a href=\"#\">text1</a>")
+
+            // id 값이 sec_2요소의 텍스트만 가져옴
+            var result_2 = $("#sec_2").text()
+            console.log(result_2)
+            // id 값이 sec_2인 요소의 하위 h2 요소의 텍스트 값을 제거하고, 지정한 새 텍스트 값으로 생성함
+            $("#sec_2 h2").text("텍스트 객체 TOBE")
+        });
+    </script>    
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <strong>객체 조작 및 생성</strong>
+    </h1>
+    <section id = "sec_1">
+        <h2>
+            <em>html 객체</em>
+        </h2>
+        <p>내용1</p>
+    </section>
+    <section id = "sec_2">
+        <h2>
+            <em>텍스트 객체 ASIS</em>
+        </h2>
+        <p>내용2</p>
+    </section></body>

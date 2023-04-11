@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // id가 user_name인 폼 요소의 값을 result_1에 삽입
+            var result_1 = $("#user_name").val()
+            console.log(result_1)
+
+            // id가 user_id인 폼 요소의 값을 "javascript"로 변경
+            $("#user_id").val("javascript")
+
+            // .prop("defaultValue") : 사용자가 value의 속성값을 바꿔도 초기의 value 속성값을 가져옴
+            var result_2 = $("#user_id").prop("defaultValue");
+            console.log(result_2)
+        });
+    </script>    
+    <title>Document</title>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <form action="#" id="form_1">
+        <p>
+            <label for="user_name">이름</label>
+            <input type="text" name="user_name" id="user_name" value="왕초보개발자">
+        </p>
+        <p>
+            <label for="user_id">아이디</label>
+            <input type="text" name="user_id" id="user_id" value="nooblette">
+        </p>
+    </form>
+</body>
