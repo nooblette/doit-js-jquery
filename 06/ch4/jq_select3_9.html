@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // id가 wrap인 요소의 하위 p 요소의 2번째 인덱스에 다음에 <p>After</p> 요소를 추가
+            $("#wrap p:eq(2)").after("<p>After</p>")
+
+            // <p>insertAfter</p> 요소를 id가 wrap인 요소의 하위 p 요소중 첫번째 요소의 다음 위치에 추가
+            $("<p>insertAfter</p>").insertAfter("#wrap p:eq(1)")
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+</body>
