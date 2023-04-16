@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").click(function(){ // class명이 btn1인 요소에 대해 click 이벤트가 발생하면
+                $(".btn1").parent().next() // btn1의 부모요소(<p>)의 다음 요소(<p>)의 글자색을 빨간색으로 변경
+                .css({"color" : "#f00"});
+            })
+
+            $(".btn2").on({
+                "mouseover focus" : function() {
+                    $(".btn2").parent().next()
+                    .css({"color" : "#0f0"});
+                }
+            })
+
+            // 강제 이벤트 발생
+            $(".btn1").click();              // 단독 이벤트 등록 메서드
+            $(".btn2").trigger("mouseover"); // trigger() 메서드
+        })
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <P>내용2</P>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // 이벤트 대상 브라우저(window)에서 스크롤바 이벤트가 발생하면
+            $(window).on("scroll", function(){
+                var sc_top = $(this).scrollTop()
+                var sc_left = $(this).scrollLeft()
+
+                // class명이 top인 요소의 기존 텍스트를 지우고 sc_top(이동한 높이)로 대체
+                $(".top").text(sc_top);
+
+                // class명이 left인 요소의 기존 텍스트를 지우고 sc_left(이동한 폭)로 대체
+                $(".left").text(sc_left);
+            })
+        })
+    </script>
+    <title>Document</title>
+    <style>
+        body {
+            height: 10000px;
+            width: 5000px;
+        }
+        #wrap {
+            position: fixed;
+            left : 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>scrollTop: <span class="top">0</span>px</p>
+        <p>scrollLeft: <span class="left">0</span>px</p>
+    </div>
+</body>
+</html>

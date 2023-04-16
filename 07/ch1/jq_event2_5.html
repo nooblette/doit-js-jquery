@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // class 속성 값이 menuWrap_1인 요소의 하위 a 요소에 clikc 이벤트가 발생하면
+            $(".menuWrap_1 a").on("click", function(e){
+                /* 이벤트 핸들러*/
+
+                // 1. <a> 태그의 디폴트 이벤트를 제거
+                e.preventDefault(); 
+
+                // 2. class 속성 값이 menuWrap_1인 요소의 하위 a 요소의 배경색을 빨간색으로 변경
+                $(".menuWrap_1 a").css({
+                    "background-color" : "red"
+                })
+
+                // 3. class 속성 값이 menuWrap_1인 요소의 하위 a 요소 중 click 이벤트가 발생한 요소의 배경색만 노란색으로 변경
+                $(this).css({
+                    "background-color" : "yellow"
+
+                })
+
+                // 4. click 이벤트가 발생한 요소의 index 값을 console 출력
+                var index = $(".menuWrap_1 a").index(this)
+                console.log(index)
+            })
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>$(this) / Index()</h2>
+    <ul class="menuWrap_1">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+</body>
+</html>

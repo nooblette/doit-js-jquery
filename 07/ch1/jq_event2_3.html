@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(function(){
+            // id가 rel_site인 요소에서 change 이벤트(포커스가 다른 요소로 이동)가 발생하면
+            $("#rel_site").on("change", function(){
+                // class 명이 txt인 요소의 텍스트 값을 이 change 이벤트로 부터 전달받은 이벤트 객체 값으로 변경
+                $(".txt").text($(this).val())
+            })
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="www.google.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+</body>
+</html>
