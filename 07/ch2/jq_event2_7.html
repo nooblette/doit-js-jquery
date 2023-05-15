@@ -7,13 +7,16 @@
     <script src="js/jquery-3.6.4.js"></script>
     <script>
         $(function(){
+            // btn_1에 mouseover focus 이벤트가 발생하면 "HELLO" 얼럿창이 출력
             $(".btn_wrap").delegate(".btn_1.on", "mouseover focus", function() {
                 alert("HELLO");
             })
+            // delegate는 라이브 이벤트 등록 방식이므로 이벤트를 등록한 이후에 새로 생성된 요소에도 이벤트가 적용됨
             $(".btn_1").addClass("on");
 
-            $(document).one("mouseover focus", "btn_2.on", function() {
-                alert("WELCOM");
+            // "WELCOME" 이벤트는 one 메서드로 등록되었으므로 1회만 발생, 그 후엔 제거됨
+            $(document).one("mouseover focus", ".btn_2.on", function() {
+                alert("WELCOME");
             })
             $(".btn_2").addClass("on")
         })
@@ -22,7 +25,7 @@
 </head>
 <body>
     <div id="wrap">
-        <p calss="btn_wrap"><button class="btn_1">버튼1</button></p>
+        <p class="btn_wrap"><button class="btn_1">버튼1</button></p>
         <p><button class="btn_2">버튼2</button></p>
     </div>
 </body>

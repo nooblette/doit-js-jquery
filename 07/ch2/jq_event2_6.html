@@ -7,19 +7,20 @@
     <script src="js/jquery-3.6.4.js"></script>
     <script>
         $(function(){
-            // 이벤트를 등록하고 btn_1 요소 하위에 onClass 값을 생성하면 이벤트가 동작 안함
-            $(".btn_1.onClass").on("mouseover focus", function(){
-                alert("HELLO")
+            // btn1 클래스의 하위 on 클래스에 mouserover 혹은 focus 이벤트가 발생하면
+            $(".btn_1.on").on("mouseover focus", function(){
+                alert("HELLO"); // "HELLO"를 화면에 출력
             })
-            $(".btn_1").addClass("onClass");
+            // 이벤트를 등록하고 class를 생성하면 이벤트가 정상적으로 실행되지 않음
+            $(".btn_1").addClass("on"); 
 
-
-            // 라이브 이벤트 등록 방식으로 동적으로 생성된 요소(.onClass)에 대해 이벤트를 등록
-            $(document).on("mouseover focus", ".btn_2.onClass",function(){
-                alert("WELCOME")
+            // 리이브 이벤트 등록 방식으로 이벤트를 등록
+            $(document).on("mouseover focus", ".btn_2.on", function(){
+                alert("WELCOME");
             })
-            $(".btn_2").addClass("onClass");
-        })
+            // 라이브 이벤트 등록 방식 테스트를 위해, 이벤트를 등록한 다음 on클래스를 생성
+            $(".btn_2").addClass("on"); 
+        });
     </script>
     <title>Document</title>
 </head>
