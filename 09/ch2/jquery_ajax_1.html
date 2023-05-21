@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="js/jquery-3.6.4.js"></script>
+<script>
+    $(function(){
+        // load() 메서드를 통해 외부 html 파일(jquery_ajax_news.html) 요소를 불러와 선택한 요소(div)에 삽입
+        $("#newsWrap_1")
+        .load("jquery_ajax_news.html #news_1");
+        $("#newsWrap_2")
+        .load("jquery_ajax_news.html #news_2");
+    });
+</script>
+<body>
+    <h1>LOAD 1</h1>
+    <div id = "newsWrap_1"></div>
+    <h1>LOAD 2</h1>
+    <div id = "newsWrap_2"></div>
+</body>
+</html>
