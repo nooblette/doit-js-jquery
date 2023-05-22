@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Plugin</title>
+    <!-- 제이쿼리 라이브러리 -> UI 플러그인 JS 파일 순으로 연동해야함 -->
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="js/jquery-ui.min.js"> </script>
+    <style>
+        .layer_popup{
+            position: absolute;left: 50px; top : 50px;
+            cursor:move;
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".layer_popup").draggable();
+        });
+    </script>
+</head>
+<body>
+    <div class="layer_popup">
+        <img src="images/ui-icons_444444_256x240.png" alt="">
+    </div>
+</body>
+</html>

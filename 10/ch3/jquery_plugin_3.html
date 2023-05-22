@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Plugin</title>
+    <!-- 제이쿼리 라이브러리 -> UI 플러그인 JS 파일 순으로 연동해야함 -->
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="bxslider-4-4.2.12/src/js/jquery.bxslider.js"> </script>
+    <link rel="stylesheet" href="bxslider-4-4.2.12/src/css/jquery.bxslider.css">
+    <script>
+        $(function() {
+            $('.slide_gallery').bxSlider({
+                auto : true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                pager: true
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery_wrap">
+        <ul class="slide_gallery">
+            <li><img src="images/pic_1.jpg" alt="pic1"></li>
+            <li><img src="images/pic_2.jpg" alt="pic2"></li>
+            <li><img src="images/pic_3.jpg" alt="pic3"></li>
+            <li><img src="images/pic_4.jpg" alt="pic4"></li>
+            <li><img src="images/pic_5.jpg" alt="pic5"></li>
+        </ul>
+    </div>
+</body>
+</html>
